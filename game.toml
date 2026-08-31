@@ -1,0 +1,53 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Colin McRae Rally 2.0"
+id = "SLUS-01222"
+players = 1
+exe = "disc/SLUS_012.22"
+disc = ""
+load_address = "0x80010000"
+entry_pc = "0x8003467C"
+text_size = "0x0004B000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Colin McRae Rally 2.0 (USA) (En,Fr,Es) (Track 1).bin"
+cue_name = "Colin McRae Rally 2.0 (USA) (En,Fr,Es).cue"
+boot_exe = "SLUS_012.22"
+known_sizes = [454448736]
+known_md5 = [
+  "3fd9c72a3d4bafef12e78bf4bd61b5d1",
+]
+known_sha1 = [
+  "4d595880ebb6c6f7a2b63d9503b733f44b1ef230",
+]
+known_crc32 = [
+  "6dac1904",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "colin-mcrae-rally-2-0- Recompiled"
+memcard_dir = "saves"
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "3d261fbfceeb57c015dc88e7d19f7359308248bb6fb1261562aabfdb055bd55d"

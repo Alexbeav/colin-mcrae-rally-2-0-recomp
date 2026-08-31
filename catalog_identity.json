@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Colin McRae Rally 2.0",
+    "id": "SLUS-01222",
+    "boot_exe": "SLUS_012.22"
+  },
+  "marketing": {
+    "description": "A native recompilation setup host for Colin McRae Rally 2.0.",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Colin McRae Rally 2.0 (USA) (En,Fr,Es).cue",
+    "bin_name": "Colin McRae Rally 2.0 (USA) (En,Fr,Es) (Track 1).bin",
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 454448736,
+      "md5": "3fd9c72a3d4bafef12e78bf4bd61b5d1",
+      "sha1": "4d595880ebb6c6f7a2b63d9503b733f44b1ef230",
+      "crc32": "6dac1904"
+    },
+    "disc_fp": "3d261fbfceeb57c015dc88e7d19f7359308248bb6fb1261562aabfdb055bd55d"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8003467C",
+    "text_size": "0x0004B000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 532,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
